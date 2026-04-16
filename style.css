@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.img{
+    border-radius: 50%;
+}
+.header-comment{
+    display: flex;
+    flex-flow: row nowrap;
+
+}
+.name-verify{ 
+    display: flex;
+    flex-flow: column nowrap;
+}
+.conteiner-principal{
+    display: grid;
+    grid-template-areas: 
+    "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira"
+    ;
+    justify-items: center;
+    gap: 10px;
+
+}
+.comment-daniel{
+    grid-area: daniel;
+
+}
+.comment-jonathan{
+    grid-area: jonathan;
+
+}
+.comment-jeanette{
+    grid-area: jeanette;
+
+}
+.comment-patrick{
+    grid-area: patrick;
+
+
+}
+.comment-kira{
+    grid-area: kira;
+
+}
