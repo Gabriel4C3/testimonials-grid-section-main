@@ -1,21 +1,47 @@
 @charset "utf-8";
 
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: hsl(0, 0%, 96%);
+    padding: 80px;
+}
 .img{
+    display: flex;
+    align-items: center;
+    justify-content: start;
     border-radius: 50%;
+    
 }
 .header-comment{
     display: flex;
     flex-flow: row nowrap;
+    z-index: 3;
+    
 
+}
+.symbol{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: 0.2;
+}
+p{
+    z-index: 1;
+    font-size: 13px;
+    
 }
 .name-verify{ 
     display: flex;
     flex-flow: column nowrap;
+    text-align: justify;
+    padding-left: 20px;
 }
 .conteiner-principal{
     display: grid;
@@ -23,28 +49,92 @@
     "daniel daniel jonathan kira"
     "jeanette patrick patrick kira"
     ;
-    justify-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 34px;
+    background-color: hsl(0, 0%, 96%);
+    padding: 40px;
+    font-family: Barlow Semi condensed;
+    width: 100%;
+    height: 70%;
+    margin: auto;
 
+}
+.comment{
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px 5px hsl(214, 17%, 92%);
+
+}
+h2{
+    margin-bottom: 30px;
+    font-size: 20px;
 }
 .comment-daniel{
     grid-area: daniel;
+    position: relative;
+    background-color: hsl(263, 55%, 52%);
+    color:  hsl(214, 17%, 92%);
+    
+    
 
 }
 .comment-jonathan{
     grid-area: jonathan;
+    background-color: hsl(217, 19%, 35%);
+    color:  hsl(214, 17%, 92%);
+    
 
 }
 .comment-jeanette{
     grid-area: jeanette;
+    background-color:  hsl(0, 0%, 100%);
+    color: hsl(217, 19%, 35%);
+    
 
 }
 .comment-patrick{
     grid-area: patrick;
+    background-color:  hsl(219, 29%, 14%);
+    color:  hsl(214, 17%, 92%);
+    
 
 
 }
 .comment-kira{
     grid-area: kira;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(217, 19%, 35%);
+    padding: 20px;
 
 }
+.attribution{
+    align-self: center;
+    font-family: Barlow Semi condensed;
+    color:  hsl(217, 19%, 35%);
+    
+}
+a{
+    text-decoration: none;
+    color: hsl(219, 29%, 14%);
+}
+@media screen and (max-width: 700px){
+    .conteiner-principal{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "daniel"
+        "daniel"
+        "jonathan"
+        "jeanette"
+        "patrick"
+        "patrick"
+        "kira"
+        "kira"
+        "kira"
+
+        
+        
+        ;
+    }
+    
+} 
+    
